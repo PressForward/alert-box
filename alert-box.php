@@ -6,7 +6,6 @@ if (!class_exists('The_Alert_Box')){
         public static $status = 'alert_specimen';
 		public static $option_name = 'alert_box_options';
 		var $settings;
-		var $alert_name;
 
         public static function init() {
             static $instance;
@@ -34,7 +33,6 @@ if (!class_exists('The_Alert_Box')){
 					add_action( 'wp_ajax_remove_alerted_posts', array( $this, 'remove_alerted_posts') );
 					add_action( 'wp_ajax_dismiss_alerts_ajax', array( $this, 'dismiss_alerts_ajax') );
 			}
-			$this->alert_name = $this->alert_name_maker();
 			#add_action( 'admin_init', array($this, 'settings_field_settings_page') );
         }
 
